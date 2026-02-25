@@ -1,0 +1,117 @@
+
+.tender-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #e9edf0;
+  padding: 20px;
+}
+
+/* Card styling */
+.tender-card {
+  background: #fff;
+  width: 600px;
+  max-width: 100%;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+/* Form header */
+.tender-card h2 {
+  text-align: center;
+  color: #2e7d32;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+/* Labels */
+.tender-card label {
+  display: block;
+  margin-top: 12px;
+  font-weight: 500;
+  color: #333;
+}
+
+/* Inputs, textarea, selects */
+.tender-card input,
+.tender-card select,
+.tender-card textarea {
+  width: 100%;
+  margin-top: 6px;
+  padding: 10px;
+  border: 1px solid #cfd8dc;
+  border-radius: 6px;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+/* Textarea height */
+.tender-card textarea {
+  min-height: 80px;
+  resize: vertical;
+}
+
+/* Radio buttons group */
+.radio-group {
+  display: flex;
+  gap: 20px;
+  margin-top: 6px;
+}
+
+.radio-group label {
+  font-weight: normal;
+}
+
+/* Submit button */
+.tender-card button {
+  width: 100%;
+  margin-top: 22px;
+  height: 44px;
+  background: #2e7d32;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.tender-card button:hover {
+  background: #276129;
+}
+
+/* Report link */
+.show-report-link {
+  text-align: center;
+  font-size: 14px;
+  color: #555;
+  margin: 15px 0;
+}
+
+.show-report-link span {
+  color: #2e7d32;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.show-report-link span:hover {
+  color: #276129;
+}
+
+/* Image preview */
+.image-field {
+  margin-top: 12px;
+}
+
+.preview-image {
+  width: 128px;
+  height: 128px;
+  object-fit: cover;
+  border: 1px solid #cfd8dc;
+  border-radius: 8px;
+  margin-top: 6px;
+}

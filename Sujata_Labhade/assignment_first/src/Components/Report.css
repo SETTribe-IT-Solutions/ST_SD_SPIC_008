@@ -1,0 +1,169 @@
+/* Container */
+.tender-container {
+  display: flex;
+  justify-content: center;
+  padding: 30px;
+  background-color: #f4f6f9;
+  min-height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Card */
+.tender-card {
+  width: 100%;
+  max-width: 1400px;
+  background-color: #fafafa;
+  padding: 25px 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Header */
+.report-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.report-header h2 {
+  color: #2e7d32;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+/* Actions */
+.report-actions {
+  display: flex;
+  gap: 12px;
+}
+
+.export-btn,
+.logout-btn,
+.add-btn,
+.action-btn {
+  padding: 8px 16px;
+  font-size: 14px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.export-btn {
+  background-color: #1976d2;
+  color: white;
+}
+.export-btn:hover {
+  background-color: #1565c0;
+}
+
+.logout-btn {
+  background-color: #d32f2f;
+  color: white;
+}
+.logout-btn:hover {
+  background-color: #c62828;
+}
+
+.add-btn {
+  background-color: #2e7d32;
+  color: white;
+  margin-bottom: 15px;
+  width: 100%;
+}
+.add-btn:hover {
+  background-color: #1b5e20;
+}
+
+/* Table scroll */
+.table-scroll {
+  overflow-x: auto;
+  border-radius: 8px;
+  border: 1px solid #fffefe5d;
+}
+
+/* Table */
+.report-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 1200px;
+}
+
+.report-table th,
+.report-table td {
+  padding: 12px 10px;
+  text-align: left;
+  font-size: 14px;
+}
+
+.report-table th {
+  background-color: #f1f5f9;
+  font-weight: 600;
+  color: #333;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+/* Alternate row shading */
+.report-table tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+/* Hover effect */
+.report-table tbody tr:hover {
+  background-color: #e3f2fd;
+}
+
+/* Action buttons */
+.action-cell {
+  display: flex;
+  gap: 6px;
+}
+
+.action-btn.edit {
+  background-color: #065f92;
+  color: white;
+}
+.action-btn.edit:hover {
+  background-color: #065f92;
+}
+
+.action-btn.delete {
+  background-color: #8f1010;
+  color: white;
+}
+.action-btn.delete:hover {
+  background-color: #8f1010;
+}
+
+/* Image styling */
+.report-table img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 4px;
+  border: 1px solid #c1c1c1;
+}
+
+/* Responsive */
+@media screen and (max-width: 1024px) {
+  .report-table th,
+  .report-table td {
+    padding: 8px 6px;
+    font-size: 13px;
+  }
+}
+
+/* Table heading – bold  */
+.report-table th {
+  background-color: #a2de95;
+  font-weight: 800;        
+  color: #1f2937;          
+  text-transform: uppercase; 
+  letter-spacing: 0.5px;
+  font-size: 13.5px;
+  border-bottom: 2px solid #d0d7de;
+}
