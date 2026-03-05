@@ -79,11 +79,15 @@ router.post("/login", async (req, res) => {
     if (!match) return res.status(400).json({ message: "Invalid credentials" });
 
     // sign JWT and return basic user info + token
-    const jwt = require("jsonwebtoken");
+    const jwt = require("jsonwebtoken"); //Import JWT library to generate token.
     const secret = process.env.JWT_SECRET || "change_this_secret";
-    const token = jwt.sign({ id: user._id, email: user.email }, secret, { expiresIn: "7d" });
 
-    res.json({ id: user._id, email: user.email, fullName: user.fullName, photoUrl: user.photoUrl, token });
+
+
+    
+    const token = jwt.sign({ id: user._id, email: user.email }, secret, { expiresIn: "7d" }); //creates token after login.
+
+    res.json({ id: user._id, email: user.email, fullName: user.fullName, photoUrl: user.photoUrl, token }); //Sends JWT token to frontend.
   } catch (err) {
     console.error("Login error:", err.message || err);
     res.status(500).json({ message: "Server error" });

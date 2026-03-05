@@ -67,10 +67,18 @@ function Register() {
       return;
     }
 
-    if (form.mobile.length !== 10) {
-      alert("Mobile number must be 10 digits");
-      return;
-    }
+    // if (form.mobile.length !== 10) {
+    //   alert("Mobile number must be 10 digits");
+    //   return;
+    // }
+     
+    const mobilePattern = /^[6-9]\d{9}$/;
+if (!mobilePattern.test(form.mobile)) {
+  alert("Mobile number must be 10 digits and start with 6, 7, 8, or 9");
+  return;
+}
+
+
 
     if (form.password !== form.confirmPassword) {
       alert("Password and Confirm Password must match");

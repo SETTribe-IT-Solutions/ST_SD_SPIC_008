@@ -96,10 +96,16 @@ function TenderForm({ editData, editIndex }) {
       }
     }
 
-    if (form.mobile.length !== 10) {
-      alert("Mobile number must be 10 digits");
-      return;
-    }
+    // if (form.mobile.length !== 10) {
+    //   alert("Mobile number must be 10 digits");
+    //   return;
+    // }
+
+    const mobilePattern = /^[6-9]\d{9}$/;
+if (!mobilePattern.test(form.mobile)) {
+  alert("Mobile number must be 10 digits and start with 6 to 9");
+  return;
+}
 
     try {
       setSubmitting(true);

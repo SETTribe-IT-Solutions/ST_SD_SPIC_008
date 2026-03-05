@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 const multer = require("multer"); //for cloud operations 
 const { uploadBuffer, configure, destroyPublicId } = require("../config/cloudinary");
-const auth = require("../middleware/auth");
+const auth = require("../middleware/auth"); //Imports the JWT verification middleware.
 
 const Tender = require("../models/Tender");
 
@@ -31,7 +31,7 @@ router.get("/", async (req, res) => {
 });
 
 // POST /api/tenders (protected)
-router.post("/", auth, cpUpload, async (req, res) => {
+router.post("/", auth, cpUpload, async (req, res) => { //only users with a valid token can submit tenders.
   try {
     const body = req.body || {};
     const fileFields = req.files || {};
@@ -61,7 +61,7 @@ router.post("/", auth, cpUpload, async (req, res) => {
 });
 
 // PUT /api/tenders/:id (protected)
-router.put("/:id", auth, cpUpload, async (req, res) => {
+router.put("/:id", auth, cpUpload, async (req, res) => { //only authenticated users can update tenders.
   try {
     const id = req.params.id;
     const body = req.body || {};
@@ -107,7 +107,7 @@ router.put("/:id", auth, cpUpload, async (req, res) => {
 
 // DELETE /api/tenders/:id (protected)
 router.delete("/:id", auth, async (req, res) => {
-  try {
+  try { //only authenticated users can delete tenders.
     const id = req.params.id;
     console.log("DELETE /api/tenders/ called with id:", id);
 
